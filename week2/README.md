@@ -82,4 +82,88 @@ text(y=max(steps_group$steps)-5,x=400,labels = paste("Max Steps =",max(steps_gro
 
 ## Imputing missing data
 
+```r
+library(mice)
+#Impute the missing data using "mice" package
+#Following function will use "Predictive Mean Matching" algorithm to impute NA()s.
+myframe <- as.data.frame(activitydata)
+myframe[,c("date")] <- as.factor(myframe[,c("date")])
+tempdata <- mice(data = myframe, seed=500)
+```
+
+```
+## 
+##  iter imp variable
+##   1   1  steps
+##   1   2  steps
+##   1   3  steps
+##   1   4  steps
+##   1   5  steps
+##   2   1  steps
+##   2   2  steps
+##   2   3  steps
+##   2   4  steps
+##   2   5  steps
+##   3   1  steps
+##   3   2  steps
+##   3   3  steps
+##   3   4  steps
+##   3   5  steps
+##   4   1  steps
+##   4   2  steps
+##   4   3  steps
+##   4   4  steps
+##   4   5  steps
+##   5   1  steps
+##   5   2  steps
+##   5   3  steps
+##   5   4  steps
+##   5   5  steps
+```
+
+```r
+#combine the data back to one single set
+cdata  <- complete(tempdata)
+
+#we now have full data set with imputed missing values.
+```
+
+##Histogram of total number of steps per day
+
+```r
+sumdata <- aggregate(steps ~ date, cdata, sum)
+hist(sumdata$steps, main="Histogram to total steps (imputed)", xlab="Total number of steps in a day")
+```
+
+![](Figs/unnamed-chunk-7-1.png)<!-- -->
+
+## Comparing activities by weekdays and weekends
+
+
+```r
+#Determine the weekday
+cdata$weekday <- weekdays(as.Date(cdata$date))
+
+#Tag the weekday type
+if("weekdaytype" %in% colnames(cdata)) {
+  cdata$weekdaytype <- as.character(cdata$weekdaytype)
+}
+cdata$weekdaytype[!(cdata$weekday %in% c("Saturday","Sunday"))] <- "Weekday"
+cdata$weekdaytype[cdata$weekday %in% c("Saturday","Sunday")] <- "Weekend"
+
+cdata$weekdaytype <- as.factor(cdata$weekdaytype)
+
+# calculate average data
+
+avgsteps <- aggregate(steps ~ interval + weekdaytype, cdata, mean)
+#Split and plot two graphs
+#library(ggplot2)
+#qplot(x = interval, y = steps, data=avgsteps, geom = c("line"), facet_wrap(. ~ weekdaytype, ncol=2))
+par(mfrow=c(2,1))
+with(avgsteps[avgsteps$weekdaytype == "Weekday",], plot(interval, steps, type="l", ylab="Number of steps", main="Weekday trend"))
+
+with(avgsteps[avgsteps$weekdaytype == "Weekend",], plot(interval, steps, type="l", ylab="Number of steps", main="Weekend trend"))
+```
+
+![](Figs/unnamed-chunk-8-1.png)<!-- -->
 
