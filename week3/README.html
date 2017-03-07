@@ -306,6 +306,101 @@ $(document).ready(function () {
 <li><p>Setting the seed allows for the stream of random numbers to be exactly reproducible</p></li>
 <li><p>Whenever you generate random numbers for a non-trivial purpose, <strong>always set the seed</strong></p></li>
 </ul>
+<blockquote>
+<p>Summary: Checklist</p>
+</blockquote>
+<ul>
+<li><p>Are we doing good science?</p></li>
+<li><p>Was any part of the analysis done by hand</p></li>
+<li><p>If so, are those precisely documented?</p></li>
+<li><p>Does the documentation match reality?</p></li>
+<li><p>Have we taught the computer to do as much as possible (i.e. coded) ?</p></li>
+<li><p>Are we using version control system?</p></li>
+<li><p>Have we documented our software environment?</p></li>
+<li><p>Have we saved any output that we cannot reconstruct from original data + code ?</p></li>
+<li><p>How far back in the analysis pipeline can we go before our results are no longer (automatically) reproducible ?</p></li>
+</ul>
+</div>
+<div id="evidence-based-data-analysis" class="section level2">
+<h2>Evidence Based Data Analysis</h2>
+<div id="replication-and-reproducibility" class="section level3">
+<h3>Replication and Reproducibility</h3>
+<blockquote>
+<p>Replication</p>
+</blockquote>
+<ul>
+<li><p>Focuses on the validity of the scientific claim</p></li>
+<li><p>“Is this claim true”?</p></li>
+<li><p>The ultimate standard of strengthening scientific evidence</p></li>
+<li><p>New investigators, data analytical methods, laboratories, instruments, etc</p></li>
+<li><p>Particularly important in studies that can impact broad policy or regulatory decisions</p></li>
+</ul>
+<blockquote>
+<p>Reproducibility</p>
+</blockquote>
+<ul>
+<li><p>Focuses on validity of the data analysis</p></li>
+<li><p>“Can we trust this analysis”?</p></li>
+<li><p>Arguably a minimum standard for any scientific study</p></li>
+<li><p>New investigators, same data, same methods</p></li>
+<li><p>Important when replication is impossible</p></li>
+</ul>
+</div>
+<div id="background-and-underlying-trends" class="section level3">
+<h3>Background and Underlying Trends</h3>
+<ul>
+<li><p>Some studies cannot be replicated: No time, No money, Unique / Opportunistic</p></li>
+<li><p>Technology is increasing data collection throughput; data are more complex and high-dimensional</p></li>
+<li><p>Existing database can be merged to become bigger databases (but data are used off-label)</p></li>
+<li><p>Computing power allows more sophisticated analysis, even on “small” data</p></li>
+<li><p>For every fied “X” there is a “Computational X”</p></li>
+</ul>
+</div>
+<div id="the-result" class="section level3">
+<h3>The Result ?</h3>
+<ul>
+<li><p>Even the basic analyses are difficult to describe</p></li>
+<li><p>Heavy computational requirements are thrust upon people without adequate training in statistics and computing</p></li>
+<li><p>Errors are more easily introduced in the long analysis pipelines</p></li>
+<li><p>Knowledge trasfer is inhibited</p></li>
+<li><p>Results are difficult to replicate or reproduce</p></li>
+<li><p>Complicated analyses cannot be trusted</p></li>
+</ul>
+</div>
+<div id="what-is-reproducible-research" class="section level3">
+<h3>What is Reproducible Research ?</h3>
+<p>Scientific Question -&gt; Protocol -&gt; Nature -&gt; Measured Data -&gt; (Processing Code) -&gt; Analytic Data -&gt; (Analytic Code) -&gt; Computational Results</p>
+<p>Computational Results -&gt; Tables or Figures or Numerical Summaries -&gt; (Text) -&gt; Published Article</p>
+</div>
+<div id="what-problem-does-reproducibility-solve" class="section level3">
+<h3>What Problem Does Reproducibility Solve ?</h3>
+<blockquote>
+<p>What we get</p>
+</blockquote>
+<ul>
+<li><p>Transparency</p></li>
+<li><p>Data Availability</p></li>
+<li><p>Software / Methods Availability</p></li>
+<li><p>Improved Knowledge Transfer</p></li>
+</ul>
+<blockquote>
+<p>What we do NOT get</p>
+</blockquote>
+<ul>
+<li>Validity / Correctness of the analysis</li>
+</ul>
+<p>An analyses can be reproducible and still be wrong</p>
+<p>We want to know “Can we trust this analysis?”</p>
+<p>Does requiring reproducibility deter bad analysis?</p>
+</div>
+</div>
+<div id="problems-with-reproducibility" class="section level2">
+<h2>Problems with Reproducibility</h2>
+<p>The promise of reproducible research is that with data/code available, people can check each other and the whole system is self-correcting</p>
+<ul>
+<li><p>Address the most “downstream” aspect of the research process - post-publication</p></li>
+<li><p>Assumes everyone plays by the same rules and want to achieve the same goals (i.e., scientific discovery)</p></li>
+</ul>
 </div>
 
 

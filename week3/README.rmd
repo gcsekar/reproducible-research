@@ -197,3 +197,115 @@ sessionInfo()
 
 * Whenever you generate random numbers for a non-trivial purpose, **always set the seed**
 
+> Summary: Checklist
+
+* Are we doing good science?
+
+* Was any part of the analysis done by hand
+
+ - If so, are those precisely documented?
+ 
+ - Does the documentation match reality?
+ 
+* Have we taught the computer to do as much as possible (i.e. coded) ?
+
+* Are we using version control system?
+
+* Have we documented our software environment?
+
+* Have we saved any output that we cannot reconstruct from original data + code ?
+
+* How far back in the analysis pipeline can we go before our results are no longer (automatically) reproducible ?
+
+
+## Evidence Based Data Analysis
+
+### Replication and Reproducibility
+
+> Replication
+
+* Focuses on the validity of the scientific claim
+
+* "Is this claim true"?
+
+* The ultimate standard of strengthening scientific evidence
+
+* New investigators, data analytical methods, laboratories, instruments, etc
+
+* Particularly important in studies that can impact broad policy or regulatory decisions
+
+> Reproducibility
+
+* Focuses on validity of the data analysis
+
+* "Can we trust this analysis"?
+
+* Arguably a minimum standard for any scientific study
+
+* New investigators, same data, same methods
+
+* Important when replication is impossible
+
+### Background and Underlying Trends
+
+* Some studies cannot be replicated: No time, No money, Unique / Opportunistic
+
+* Technology is increasing data collection throughput; data are more complex and high-dimensional
+
+* Existing database can be merged to become bigger databases (but data are used off-label)
+
+* Computing power allows more sophisticated analysis, even on "small" data
+
+* For every fied "X" there is a "Computational X"
+
+### The Result ?
+
+* Even the basic analyses are difficult to describe
+
+* Heavy computational requirements are thrust upon people without adequate training in statistics and computing
+
+* Errors are more easily introduced in the long analysis pipelines
+
+* Knowledge trasfer is inhibited
+
+* Results are difficult to replicate or reproduce
+
+* Complicated analyses cannot be trusted
+
+
+### What is Reproducible Research ?
+
+Scientific Question -> Protocol -> Nature -> Measured Data -> (Processing Code) -> Analytic Data -> (Analytic Code) -> Computational Results
+
+Computational Results -> Tables or Figures or Numerical Summaries -> (Text) -> Published Article 
+
+### What Problem Does Reproducibility Solve ?
+
+> What we get
+
+* Transparency
+
+* Data Availability
+
+* Software / Methods Availability
+
+* Improved Knowledge Transfer
+
+> What we do  NOT get
+
+* Validity / Correctness of the analysis
+
+An analyses can be reproducible and still be wrong
+
+We want to know "Can we trust this analysis?"
+
+Does requiring reproducibility deter bad analysis?
+
+## Problems with Reproducibility
+
+The promise of reproducible research is that with data/code available, people can check each other and the whole system is self-correcting
+
+* Address the most "downstream" aspect of the research process - post-publication
+
+* Assumes everyone plays by the same rules and want to achieve the same goals (i.e., scientific discovery)
+
