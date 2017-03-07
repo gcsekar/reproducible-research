@@ -309,3 +309,65 @@ The promise of reproducible research is that with data/code available, people ca
 
 * Assumes everyone plays by the same rules and want to achieve the same goals (i.e., scientific discovery)
 
+## Who Reproduces Research?
+
+* For reproducibility to be effective as a means to check validity, someone needs to do something
+
+ - Re-run the analysis; check results match
+ 
+ - Check the code for bugs/errors
+ 
+ - Try alternate approaches; check sensitivity
+ 
+* The need for someone to do something is inherited from traditional notion of replication
+
+* Who is "someone" and what are their goals?
+
+## The Story So Far
+
+* Reproducibility brings transparency (wrt code+data) and increased transfer of knowledge
+
+* A lot of discussion about how to get people to share data
+
+* Key question of "can we trust this analysis?" is not addressed by reproducibility
+
+* Reproducibility addresses potential problems long after they've occurred ("downstream")
+
+* Secondary analyses are inevitably coloured by the interests / motivations of others
+
+## Evidence-based Data Analysis
+
+* Most data analyses involve stringing together many different tools and methods
+
+* Some methods may be standard for a given field, but others are often applied ad hoc
+
+* We should apply thoroughly studied (via statistical research), mutually agreed upon methods to analyze data whenever possible
+
+* There should be evidence to justify the application of a given method
+
+***
+
+* Create analytic pipelines from evidence-based component - standarize it
+
+* A Deterministic Statistical Machine - http://goo.gl/Qvlhuv
+
+* Once an evidence-based analytic pipeline is establised, we shouldn't mess with it
+
+* Analysis with a "transparent box"
+
+* Reduce the "researcher degrees of freedom"
+
+* Analogous to pre-specified clinical trial protocol
+
+> Deterministic Statistical Model
+
+**Dataset and Input Metadata -> Preprocessing -> Model Selection -> Sensitivity Analysis -> Report and Output parameters**
+
+* Benchmark Dataset -> Preprocessing
+* Benchmark Dataset -> Model Selection
+* Benchmark Dataset -> Sensitivity Analysis
+
+* Report -> Method Section or Public Repository
+
+
+
