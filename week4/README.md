@@ -118,5 +118,28 @@ graphCode()
 
 * Expressions not resulting in objects are evaluated.
 
+## Check Code and Objects
+
+* The *checkcode* function evaluates all expressions from scratch (no lazy-loading)
+
+* Results of evaluation are checked against stored results to see if the results are the same as what the author calculated
+
+  - Settinig random number generated (RNG) seeds is critical for this to work
+
+* The integrity of data objects can be verified with the checkobjects function to check for possible corruption fo data (i.e., in transit)
+
+## Inspecting Data Objects
+
+* loadcache()
+
+Loads all the objects in cache
+
+* ls()
+
+lists alll the objects in cache
+
+user can then print and evaluate objects as appropriate
+
+
 
 

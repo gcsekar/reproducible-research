@@ -220,6 +220,27 @@ graphCode()</code></pre>
 <li><p>Expressions not resulting in objects are evaluated.</p></li>
 </ul>
 </div>
+<div id="check-code-and-objects" class="section level2">
+<h2>Check Code and Objects</h2>
+<ul>
+<li><p>The <em>checkcode</em> function evaluates all expressions from scratch (no lazy-loading)</p></li>
+<li><p>Results of evaluation are checked against stored results to see if the results are the same as what the author calculated</p></li>
+<li><p>Settinig random number generated (RNG) seeds is critical for this to work</p></li>
+<li><p>The integrity of data objects can be verified with the checkobjects function to check for possible corruption fo data (i.e., in transit)</p></li>
+</ul>
+</div>
+<div id="inspecting-data-objects" class="section level2">
+<h2>Inspecting Data Objects</h2>
+<ul>
+<li>loadcache()</li>
+</ul>
+<p>Loads all the objects in cache</p>
+<ul>
+<li>ls()</li>
+</ul>
+<p>lists alll the objects in cache</p>
+<p>user can then print and evaluate objects as appropriate</p>
+</div>
 
 
 
